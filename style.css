@@ -1,0 +1,93 @@
+/* Reinicio de estilos globales para eliminar márgenes y rellenos por defecto */
+*{
+    margin: 0px;    /* Quita todos los márgenes de los elementos */
+    padding: 0px;   /* Quita todos los rellenos internos de los elementos */
+}
+
+/* Estilos generales del cuerpo del documento */
+body{
+    background-color: lightgray;             /* Define un color de fondo gris claro */
+    font-family: Arial, Helvetica, sans-serif; /* Usa tipografía sans-serif moderna */
+}
+
+/* Contenedor principal del sitio web */
+#container{
+   width: 1100px;             /* Fija un ancho total de 1100 píxeles */
+   margin: 0px auto;          /* Centra el contenedor horizontalmente */
+   border: 1px solid blue;    /* Le pone un borde azul alrededor */
+}
+
+/* Encabezado superior (header) */
+header{
+    background: red;               /* Fondo rojo para el encabezado */
+    height: 100px;                 /* Altura fija de 100 píxeles */
+    width: 100%;                   /* Ocupa todo el ancho del contenedor */
+    margin: 0px;                   /* Sin margen externo */
+    text-align: center;            /* Centra el texto horizontalmente */
+    line-height: 100px;            /* Centra el texto verticalmente */
+    color: white;                  /* Texto blanco */
+    border-bottom: 1px solid black; /* Línea negra debajo del encabezado */
+}
+
+/* Barra de navegación (menú) */
+nav{
+    background-color: lightblue;   /* Fondo azul claro */
+    height: 50px;                  /* Altura fija de 50 píxeles */
+    border-bottom: 1px solid black;/* Línea negra debajo del nav */
+}
+
+/* Elementos de la lista dentro del menú */
+nav ul li {
+    float: left;          /* Hace que los elementos se alineen horizontalmente */
+    list-style: none;     /* Quita los puntos de lista (viñetas) */
+    margin: 10px;         /* Espacio exterior entre los elementos */
+    line-height: 30px;    /* Ajusta la altura de línea del texto */
+}
+
+/* Clase utilizada para limpiar floats (evita que los elementos flotantes se superpongan) */
+.clearfix{
+    clear: both;          /* Empuja el siguiente bloque por debajo de los elementos flotantes */
+}
+
+/* Sección principal del contenido */
+#content{
+    float: left;                       /* Alinea el contenido a la izquierda */
+    width: calc(80% - 80px);           /* Ocupa el 80% del ancho, restando 80px de padding */
+    min-height: 500px;                 /* Altura mínima de 500 píxeles */
+    padding: 40px;                     /* Espacio interior de 40px en todos los lados */
+    background-color: green;           /* Fondo verde */
+}
+
+/* Títulos de los artículos */
+.article h2 {
+    font-size: 35px;                   /* Tamaño grande de fuente para los títulos */
+}
+
+/* Estilo de cada artículo */
+.article{
+    color: white;                      /* Texto blanco */
+    margin-top: 15px;                  /* Espacio superior entre artículos */
+    margin-bottom: 15px;               /* Espacio inferior entre artículos */
+    padding-bottom: 10px;              /* Espacio interior en la parte inferior */
+    border-bottom: 1px solid #eee;     /* Línea divisoria gris clara debajo de cada artículo */
+}
+
+/* Barra lateral (aside) */
+aside{
+    float: left;                       /* Alinea la barra lateral a la izquierda (junto al contenido) */
+    width: calc(20% - 20px);           /* Ocupa el 20% del ancho menos 20 píxeles */
+    min-height: 500px;                 /* Altura mínima igual al contenido */
+    padding-left: 10px;                /* Espaciado interno izquierdo */
+    padding-right: 10px;               /* Espaciado interno derecho */
+    padding-top: 20px;                 /* Espaciado superior */
+    background-color: aqua;            /* Fondo azul agua */
+}
+
+/* Pie de página */
+footer{
+    background-color: black;           /* Fondo negro */
+    color: white;                      /* Texto blanco */
+    text-align: center;                /* Centra el texto horizontalmente */
+    height: 50px;                      /* Altura fija de 50 píxeles */
+    line-height: 50px;                 /* Centra el texto verticalmente */
+}

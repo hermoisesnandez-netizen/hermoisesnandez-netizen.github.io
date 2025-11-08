@@ -1,0 +1,225 @@
+/* Reinicio global: elimina los márgenes y rellenos por defecto de todos los elementos */
+* {
+    margin: 2px;      /* Quita márgenes externos */
+    padding: 0;     /* Quita rellenos internos */
+    box-sizing: border-box; /* Hace que padding y border no aumenten el ancho total */
+    border-radius: 3px;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    background-color: white;              /* Fondo gris claro */
+    font-family: Arial, Helvetica, sans-serif;/* Fuente sans-serif moderna y legible */
+}
+
+/* Contenedor principal del sitio web */
+#container {
+    max-width: 100%;          /* Ancho máximo del sitio */
+    width: 100%;                 /* Ocupa el 90% del ancho disponible */
+    margin: 0 auto;             /* Centra horizontalmente el contenedor */
+    border: 1px solid blue;     /* Borde azul alrededor */
+    display: flex;              /* Activa el modelo Flexbox */
+    flex-direction: column;     /* Coloca los elementos en columna (de arriba hacia abajo) */
+    min-height: 100vh;          /* Ocupa al menos la altura completa de la pantalla */
+}
+
+/* Encabezado principal */
+header {
+    background: rgb(95, 89, 89);                /* Fondo rojo */
+    height: 100px;                  /* Altura de 100 píxeles */
+    display: flex;                  /* Usa flex para centrar el contenido */
+    justify-content: center;        /* Centra horizontalmente el texto */
+    align-items: center;            /* Centra verticalmente el texto */
+    color: white;                   /* Texto blanco */
+    border-bottom: 1px solid black; /* Línea divisoria debajo del header */
+}
+
+#logo {
+    height: 80px;           /* ajusta el tamaño */
+    vertical-align: middle; /* alinea con el texto */
+    margin-right: 10px;     /* separa del título */
+}
+
+/* Barra de navegación superior */
+nav {
+    background-color: lightblue;    /* Fondo azul claro */
+    border-bottom: 1px solid black; /* Línea divisoria debajo del nav */
+}
+
+/* Estilos de la lista dentro del menú */
+nav ul {
+    display: flex;                  /* Distribuye los elementos del menú en una fila */
+    justify-content: center;        /* Centra los elementos en el eje horizontal */
+    align-items: center;            /* Centra verticalmente el texto */
+    height: 50px;                   /* Altura de la barra de navegación */
+    list-style: none;               /* Quita los puntos de la lista */
+}
+
+/* Estilos de los elementos de la lista */
+nav ul li {
+    margin: 0 15px;                 /* Espacio horizontal entre enlaces */
+}
+
+/* Enlaces del menú */
+nav ul li a {
+    text-decoration: none;          /* Quita el subrayado */
+    color: black;                   /* Texto negro */
+    font-weight: bold;              /* Texto en negrita */
+    transition: color 0.3s;         /* Suaviza el cambio de color al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse */
+nav ul li a:hover {
+    color: white;                   /* Cambia el color del texto a blanco al pasar el cursor */
+}
+
+/* Contenedor principal de la sección de contenido y la barra lateral */
+main {
+    display: flex;                  /* Coloca el contenido y el aside uno al lado del otro */
+    flex: 1;                        /* Hace que este bloque ocupe el espacio disponible */
+    flex-wrap: wrap;                /* Permite que los elementos se acomoden en filas si no caben */
+}
+
+/* Sección del contenido principal */
+#content {
+    flex: 3;                        /* Ocupa 3 partes del espacio frente al aside */
+    background-color: rgb(12, 94, 12);        /* Fondo verde */
+    color: white;                   /* Texto blanco */
+    padding: 40px;                  /* Espaciado interno */
+    min-height: 500px;              /* Altura mínima */
+}
+
+/* Estilo de los artículos */
+.article {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+.article:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+
+/* Título de cada artículo */
+.article h2 {
+    font-size: 28px;                /* Tamaño de fuente del título */
+    margin-bottom: 10px;            /* Espacio debajo del título */
+}
+
+/* Barra lateral */
+.neon-aside {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid;
+    animation: rgb-border 6s linear infinite;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+@keyframes rgb-border {
+    0% { border-color: red; }
+    33% { border-color: lime; }
+    66% { border-color: blue; }
+    100% { border-color: red; }
+}
+
+.neon-aside h2 {
+    color: cyan;
+    margin-bottom: 15px;
+}
+
+.neon-aside input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    background: #111;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 8px;
+}
+
+.neon-aside input[type="submit"] {
+    background: cyan;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.neon-aside input[type="submit"]:hover {
+    background: white;
+}
+
+.neon-aside a {
+    color: cyan;
+    text-decoration: none;
+}
+
+.neon-aside a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+
+
+/* Pie de página */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 2px solid transparent;
+    animation: rgb-border 5s linear infinite;
+}
+
+@keyframes rgb-border {
+    0% { border-color: red; }
+    33% { border-color: lime; }
+    66% { border-color: blue; }
+    100% { border-color: red; }
+}
+
+
+/* ============================= */
+/* 🔹 ESTILOS RESPONSIVOS */
+/* ============================= */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;     /* Apila el contenido y el aside uno sobre otro */
+    }
+
+    #content, aside {
+        width: 100%;                /* Ambos ocupan todo el ancho */
+    }
+
+    nav ul {
+        flex-direction: column;     /* Convierte el menú en columna para pantallas pequeñas */
+        height: auto;               /* Ajusta la altura automáticamente */
+    }
+
+    nav ul li {
+        margin: 10px 0;             /* Espacio vertical entre enlaces */
+    }
+}
+
+#titulo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite alternate;
+}
+
+/* Cursor parpadeante */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

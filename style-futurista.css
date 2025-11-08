@@ -1,0 +1,259 @@
+/* ========================================================= */
+/* 🌌 REINICIO GLOBAL                                        */
+/* ========================================================= */
+* {
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+/* ========================================================= */
+/* ⚙️ CUERPO (BODY)                                          */
+/* ========================================================= */
+body {
+    background: radial-gradient(circle at top, #000 40%, #0a0a0a 100%);
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #e0e0e0;
+}
+
+/* ========================================================= */
+/* 🧱 CONTENEDOR PRINCIPAL                                   */
+/* ========================================================= */
+#container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #0ff;
+    border-image: linear-gradient(90deg, red, lime, blue) 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* ========================================================= */
+/* 🚀 ENCABEZADO PRINCIPAL                                   */
+/* ========================================================= */
+header {
+    background: linear-gradient(90deg, #0f0f0f, #222, #0f0f0f);
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+    border-bottom: 2px solid cyan;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+#logo {
+    height: 85px;
+    vertical-align: middle;
+    margin-right: 15px;
+    filter: drop-shadow(0 0 10px cyan);
+}
+
+/* ========================================================= */
+/* 🧭 BARRA DE NAVEGACIÓN                                    */
+/* ========================================================= */
+nav {
+    background: linear-gradient(90deg, #000, #002244, #000);
+    border-bottom: 2px solid cyan;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #0ff;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+}
+
+/* ========================================================= */
+/* 🧩 SECCIÓN PRINCIPAL (MAIN)                               */
+/* ========================================================= */
+main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(180deg, #0a0a0a, #001010);
+    padding: 20px;
+}
+
+/* ========================================================= */
+/* 📄 CONTENIDO PRINCIPAL (#content)                         */
+/* ========================================================= */
+#content {
+    flex: 3;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    min-height: 500px;
+    border: 1px solid cyan;
+}
+
+/* Artículos */
+.article {
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0,255,255,0.1);
+}
+
+.article:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+.article h2 {
+    font-size: 26px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    margin-bottom: 10px;
+}
+
+/* ========================================================= */
+/* 🧠 BARRA LATERAL (ASIDE) FUTURISTA                        */
+/* ========================================================= */
+.neon-aside {
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid;
+    animation: rgb-border 6s linear infinite;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+@keyframes rgb-border {
+    0% { border-color: red; }
+    33% { border-color: lime; }
+    66% { border-color: blue; }
+    100% { border-color: red; }
+}
+
+.neon-aside h2 {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    margin-bottom: 15px;
+}
+
+.neon-aside input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    background: #111;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px cyan;
+}
+
+.neon-aside input[type="submit"] {
+    background: cyan;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.neon-aside input[type="submit"]:hover {
+    background: white;
+    box-shadow: 0 0 10px cyan;
+}
+
+.neon-aside a {
+    color: cyan;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.neon-aside a:hover {
+    text-shadow: 0 0 15px cyan;
+}
+
+/* ========================================================= */
+/* ✨ EFECTO DE TÍTULO (ANIMADO)                             */
+/* ========================================================= */
+#titulo {
+    color: cyan;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-right: 3px solid cyan;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite alternate;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ========================================================= */
+/* 💾 PIE DE PÁGINA (FOOTER)                                 */
+/* ========================================================= */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 3px solid transparent;
+    animation: rgb-border 5s linear infinite;
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+    font-size: 14px;
+}
+
+/* ============================= */
+/* 🔹 ESTILOS RESPONSIVOS */
+/* ============================= */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;     /* Apila el contenido y el aside uno sobre otro */
+    }
+
+    #content, aside {
+        width: 100%;                /* Ambos ocupan todo el ancho */
+    }
+
+    nav ul {
+        flex-direction: column;     /* Convierte el menú en columna para pantallas pequeñas */
+        height: auto;               /* Ajusta la altura automáticamente */
+    }
+
+    nav ul li {
+        margin: 10px 0;             /* Espacio vertical entre enlaces */
+    }
+}
